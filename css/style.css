@@ -1,0 +1,16 @@
+.container {
+    margin-top: 85px;
+    height: 150vh;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    background-color: #0c7489;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
