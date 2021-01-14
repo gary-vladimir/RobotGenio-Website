@@ -1,32 +1,32 @@
 function myFunction(x) {
+    let contacto = document.getElementById('contacto');
+    let cursos = document.getElementById('cursos');
+    let nosotros = document.getElementById('nosotors');
+    let inicio = document.getElementById('inicio');
+
     if (x.matches) {
         // If media query matches
-        let contacto = document.getElementById('contacto');
-        let cursos = document.getElementById('cursos');
-        let nosotros = document.getElementById('nosotors');
-        let inicio = document.getElementById('inicio');
 
         if (contacto.classList.contains('notActive')) {
-            console.log('el icono contacto tendrá que desaparecer');
-            contacto.remove();
+            contacto.style.display = 'none';
         }
         if (cursos.classList.contains('notActive')) {
-            console.log('el icono cursos tendrá que desaparecer');
-            cursos.remove();
+            cursos.style.display = 'none';
         }
         if (nosotros.classList.contains('notActive')) {
-            console.log('el icono nosotros tendrá que desaparecer');
-            nosotros.remove();
+            nosotros.style.display = 'none';
         }
         if (inicio.classList.contains('notActive')) {
-            console.log('el icono inicio tendrá que desaparecer');
-            inicio.remove();
+            inicio.style.display = 'none';
         }
     } else {
-        document.body.style.backgroundColor = 'gainsboro';
+        contacto.style.display = '';
+        cursos.style.display = '';
+        nosotros.style.display = '';
+        inicio.style.display = '';
     }
 }
 
 var x = window.matchMedia('(max-width: 700px)');
 myFunction(x); // Call listener function at run time
-x.addListener(myFunction); // Attach listener function on state changes
+x.addListener(myFunction); // Attach listener function on state changes}
