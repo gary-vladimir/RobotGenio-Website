@@ -15,13 +15,3 @@ footer {
     text-align: center;
     line-height: 50px;
 }
-
-.mySlides {
-    display: none;
-    width: 100%;
-    border: 1px solid blue;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -2;
-}

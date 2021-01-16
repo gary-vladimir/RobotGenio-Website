@@ -3,6 +3,7 @@ function myFunction(x) {
     let cursos = document.getElementById('cursos');
     let nosotros = document.getElementById('nosotors');
     let inicio = document.getElementById('inicio');
+    let menu = document.getElementById('menu');
 
     if (x.matches) {
         // If media query matches
@@ -19,31 +20,48 @@ function myFunction(x) {
         if (inicio.classList.contains('notActive')) {
             inicio.style.display = 'none';
         }
+        menu.style.display = '';
     } else {
         contacto.style.display = '';
         cursos.style.display = '';
         nosotros.style.display = '';
         inicio.style.display = '';
+        menu.style.display = 'none';
     }
 }
 
 var x = window.matchMedia('(max-width: 700px)');
-myFunction(x); // Call listener function at run time
-x.addListener(myFunction); // Attach listener function on state changes}
+myFunction(x);
+x.addListener(myFunction);
 
-var myIndex = 0;
-carousel();
+let show = true;
+document.getElementById('menu').addEventListener('click', display);
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName('mySlides');
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = 'none';
+function display() {
+    let contacto = document.getElementById('contacto');
+    let cursos = document.getElementById('cursos');
+    let nosotros = document.getElementById('nosotors');
+    let inicio = document.getElementById('inicio');
+
+    if (show) {
+        contacto.style.display = '';
+        cursos.style.display = '';
+        nosotros.style.display = '';
+        inicio.style.display = '';
+        show = false;
+    } else {
+        if (contacto.classList.contains('notActive')) {
+            contacto.style.display = 'none';
+        }
+        if (cursos.classList.contains('notActive')) {
+            cursos.style.display = 'none';
+        }
+        if (nosotros.classList.contains('notActive')) {
+            nosotros.style.display = 'none';
+        }
+        if (inicio.classList.contains('notActive')) {
+            inicio.style.display = 'none';
+        }
+        show = true;
     }
-    myIndex++;
-    if (myIndex > x.length) {
-        myIndex = 1;
-    }
-    x[myIndex - 1].style.display = 'block';
-    setTimeout(carousel, 3000); // Change image every 2 seconds
 }

@@ -5,6 +5,7 @@ body {
 }
 
 nav {
+    z-index: 1;
     position: fixed;
     top: 0;
     width: 100%;
@@ -41,6 +42,7 @@ nav > ul > li > img {
     position: absolute;
     left: 20px;
     top: 0px;
+    /* filter: drop-shadow(0 0 10px black);*/
 }
 
 span {
@@ -48,7 +50,7 @@ span {
     vertical-align: middle;
 }
 
-.active {
+.isActive {
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: white;
@@ -57,6 +59,12 @@ span {
 
 .notActive {
     text-decoration: none;
+}
+#menu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100px;
 }
 
 @media (max-width: 700px) {

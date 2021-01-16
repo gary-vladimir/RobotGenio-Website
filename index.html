@@ -6,6 +6,12 @@
 
         <link rel="stylesheet" href="css/nav.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/carousel.css" />
+
+        <script
+            src="https://kit.fontawesome.com/c501c392e3.js"
+            crossorigin="anonymous"
+        ></script>
 
         <link
             rel="stylesheet"
@@ -24,7 +30,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="active" id="cursos"><span>Cursos</span></div>
+                    <div class="isActive" id="cursos"><span>Cursos</span></div>
                 </li>
                 <li>
                     <div class="notActive" id="nosotors">
@@ -37,21 +43,74 @@
                     </div>
                 </li>
                 <li>
+                    <div class="notActive" id="menu">
+                        <span><i class="fas fa-bars fa-lg"></i></span>
+                    </div>
+                </li>
+                <li>
                     <img src="/images/RobotGenio.PNG" alt="Logo" />
                 </li>
             </ul>
         </nav>
         <div class="container">
-            <!--images-->
-            <div class="w3-content w3-section" id="boxImages">
-                <img class="mySlides" src="images/im1.jpg" />
-                <img class="mySlides" src="images/im2.jpg" />
-                <img class="mySlides" src="images/im3.png" />
+            <!--image carousel-->
+
+            <div class="slideshow-container">
+                <div class="slideshow-inner">
+                    <div class="mySlides fade">
+                        <img
+                            src="./assets/img/web-crab-compressed.jpg"
+                            style="width: 100%"
+                            alt="sally lightfoot crab"
+                        />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img
+                            src="./assets/img/web-fighting-nazcas.jpg"
+                            style="width: 100%"
+                            alt="fighting bears"
+                        />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img
+                            src="./assets/img/web-otovalo-waterfall.jpg"
+                            style="width: 100%"
+                            alt="otovalo waterfall"
+                        />
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img
+                            src="./assets/img/web-pelican.jpg"
+                            style="width: 100%"
+                            alt="pelican"
+                        />
+                    </div>
+                </div>
+
+                <!--next and previous buttons-->
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <br />
+
+                <!--dots-->
+
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
             </div>
         </div>
 
         <footer>MadeByGary2021</footer>
 
         <script src="/js/app.js"></script>
+        <script src="/js/carousel.js"></script>
     </body>
 </html>
